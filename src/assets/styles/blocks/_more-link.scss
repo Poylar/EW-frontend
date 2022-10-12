@@ -13,8 +13,10 @@
   overflow: hidden;
   color: var(--white);
   &--2 {
-    background: var(--green);
-    
+    &:before,
+    &:after {
+      background: var(--green) !important;
+    }
   }
   &:before {
     content: "";
