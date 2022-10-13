@@ -1,0 +1,23 @@
+.timeline {
+  &__item {
+    padding: 40px;
+    background: var(--gray50);
+    height: 540px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__title {
+    font-size: 20px;
+    font-family: var(--font);
+  }
+  &__year {
+    font-size: 40px;
+    margin: 0 0 24px 0;
+    font-family: var(--font);
+  }
+  &__desc {
+    color: var(--gray500);
+    line-height: 156%;
+  }
+}

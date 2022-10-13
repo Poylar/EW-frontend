@@ -24,3 +24,10 @@ if (moreCaseContainer) {
     },
   });
 }
+const timelineContainer = document.querySelector(".js-timeline-slider");
+if (timelineContainer) {
+  new Swiper(timelineContainer, {
+    slidesPerView: 3.2,
+    spaceBetween: 40,
+  });
+}

@@ -22,6 +22,13 @@
     position: relative;
     cursor: pointer;
   }
+  &__desc {
+    margin: 64px 0 0;
+    font-family: var(--font);
+    font-size: 24px;
+    line-height: 133%;
+    max-width: 651px;
+  }
   + .section {
     --gap-y: 120px;
   }
@@ -108,12 +115,11 @@
 .hero-content {
   background-color: var(--background-color);
   padding-bottom: calc(800px / 1360px * 100%);
+  position: relative;
   &__item {
-    flex: 1;
-    margin: 0 0 0 -15%;
-    position: relative;
-
-    overflow: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 0;
     &:before {
       content: "";
       padding-bottom: 100%;
@@ -138,11 +144,10 @@
 
 .hero-content-inner {
   position: absolute;
-
-  padding: 92px 78px;
-  height: 100%;
+  max-width: 1200px;
+  height: 615px;
   width: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
