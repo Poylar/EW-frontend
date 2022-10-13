@@ -1,2 +1,5 @@
 import "./VideoEvent";
-import './Sliders'
+import "./Sliders";
+import "./File";
+import "./HeroContent";
+import "./Spoiler";

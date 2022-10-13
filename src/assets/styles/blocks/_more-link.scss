@@ -12,12 +12,7 @@
   position: relative;
   overflow: hidden;
   color: var(--white);
-  &--2 {
-    &:before,
-    &:after {
-      background: var(--green) !important;
-    }
-  }
+
   &:before {
     content: "";
     position: absolute;

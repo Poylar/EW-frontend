@@ -13,6 +13,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
+        landing: resolve(__dirname, "landing.html"),
       },
       output: {
         chunkFileNames: "assets/js/[name]-[hash].js",

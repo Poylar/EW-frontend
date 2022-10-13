@@ -1,0 +1,17 @@
+.case-offer {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1127px;
+  justify-content: space-between;
+  margin: 80px 0 0;
+  &__title {
+    color:var(--gray500);
+    line-height: 150%;
+  }
+  &__desc {
+    max-width: 660px;
+    line-height: 150%;
+    font-size: 20px;
+    font-family: var(--font);
+  }
+}

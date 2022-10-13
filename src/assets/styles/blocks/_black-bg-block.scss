@@ -1,0 +1,36 @@
+.black-bg-block {
+  background: var(--black);
+  padding: 120px var(--gap);
+}
+
+.full-width-block {
+  padding: 0;
+  + .section {
+    --gap-y: 120px;
+  }
+}
+
+.black-bg-block-inner {
+  display: flex;
+  column-gap: 30px;
+  justify-content: space-between;
+  color: var(--white);
+}
+
+.block {
+  &__title {
+    font-size: 24px;
+    font-family: var(--font);
+    line-height: 133%;
+    color: var(--green);
+    max-width: 340px;
+    width: 100%;
+    flex: 1;
+  }
+  &__content {
+    font-family: var(--font);
+    font-size: 40px;
+    line-height: 130%;
+    max-width: 900px;
+  }
+}

@@ -15,9 +15,9 @@ section.container.container--lines.section
       .form__block-attachment
         label.form__label.form__label--full
           textarea.form__input.form__input--textarea(type="text" placeholder="Расскажите о проекте")
-        span.files-list 
         label.form__label.form__label--file
-          input.form__input.form__input--file(type="file" multiple)
+          input.form__input.form__input--file.js-file(type="file" multiple)
+      span.files-list.js-file-output
       .form__block-bottom
         label.form__label.form__label--full
           input.form__input.form__input--checkbox(type="checkbox")
@@ -25,7 +25,6 @@ section.container.container--lines.section
             a.form__checkbox-link(href="") обработки персональных данных 
         button.form__submit.btn.btn--primary
           span  Отправить
-        button.form__submit.btn.btn--primary-2
-          span  Отправить
+
 
 

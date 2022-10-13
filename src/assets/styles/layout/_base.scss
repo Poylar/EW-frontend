@@ -60,6 +60,9 @@ body {
 
 .section {
   padding-top: var(--gap-y);
+  &:last-child {
+    padding-bottom: var(--gap-y);
+  }
 }
 
 .hidden-desktop {

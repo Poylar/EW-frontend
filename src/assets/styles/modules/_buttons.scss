@@ -2,8 +2,8 @@
 
 .btn {
   padding: 18.5px 48px;
-  display: inline-block;
   cursor: pointer;
-
- 
+  &--primary {
+    background: var(--green);
+  }
 }
