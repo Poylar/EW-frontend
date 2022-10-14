@@ -7,7 +7,10 @@
   justify-content: space-between;
 }
 
-
+.hero-stack-container {
+  position: relative;
+  margin-bottom: 80px;
+}
 
 .hero {
   &__title {
@@ -52,6 +55,7 @@
     position: relative;
     align-self: flex-start;
     margin: 0 0 20px 0;
+
     &:after {
       content: "";
       position: absolute;
@@ -120,38 +124,34 @@
 .hero-content {
   background-color: var(--background-color);
   padding-bottom: calc(800px / 1360px * 100%);
-
-  .hero__content-wrapper {
-    color: var(--white);
-    padding: 40px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: absolute;
-    top: 0;
-    left: 0;
+  color: var(--white);
+  &--dark-text {
+    color: var(--black);
+  }
+  &--static {
     .hero-content-inner {
-      position: relative;
-      left: auto;
-      top: auto;
-      transform: none;
-      margin: 0 auto;
-      height: 450px;
-      max-width: 1260px;
-      .hero-content__item {
-        &:before {
-          padding-bottom: calc(266px / 430px * 100%);
-        }
+      max-width: var(--width);
+      height: auto !important;
+    }
+    .hero-content__item {
+      position: static;
+      &:before {
+        content: none;
       }
     }
+    .hero-content__item-src {
+      height: auto;
+      border: none;
+      position: static;
+    }
   }
+
   &__item {
     position: absolute;
     left: 0;
     bottom: 0;
     will-change: transform;
+
     &:before {
       content: "";
       padding-bottom: 100%;
@@ -205,4 +205,33 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.hero__content-wrapper {
+
+  padding: 40px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-content-inner {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  margin: 0 auto;
+  height: 450px;
+  max-width: 1260px;
+
+  .hero-content__item {
+    &:before {
+      padding-bottom: calc(266px / 430px * 100%);
+    }
+  }
 }
