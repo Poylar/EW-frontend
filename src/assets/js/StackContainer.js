@@ -10,8 +10,8 @@ panels.forEach((panel, i) => {
       scrollTrigger: {
         trigger: panel,
         scrub: 0.3,
-        start: "top top",
-        end: "+=" + (panel.offsetHeight) * (panels.length - (i + 1)), // Высота элемента + отступ
+        start: "top -40",
+        end: "+=" + panel.offsetHeight * (panels.length - (i + 1)),
         pin: i === panels.length ? false : true,
         pinSpacing: false,
       },

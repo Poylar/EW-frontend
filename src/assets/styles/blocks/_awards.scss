@@ -1,0 +1,8 @@
+.awards {
+  display: flex;
+  align-items: center;
+  &__content {
+    padding-left: calc((100% - var(--container)) / 2 + var(--gap));
+    flex-grow: 1;
+  }
+}
