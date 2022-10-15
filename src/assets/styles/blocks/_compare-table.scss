@@ -1,0 +1,27 @@
+.compare {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  &__col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.chapter {
+  align-items: flex-start;
+  &__item {
+    flex-direction: row;
+ 
+  }
+}
+
+.compare__col-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

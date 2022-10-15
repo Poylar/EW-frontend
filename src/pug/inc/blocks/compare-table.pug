@@ -1,0 +1,30 @@
+-var chapter = ["Менеджер" , "Налоги и льготы"  , " Арт-директор" , "Дизайнеры" , "Доп. поддержка"]
+-var good = ["Надзор за сроками, статусами и поддержкой" , "Платить налоги за дизайнера и обеспечивать его оборудованием, социальным обеспечением и премиями", "Дизайнеры с опытом работы 8+ лет будут контролировать качество работы до ее завершения" , "Специализированные дизайнеры от Junior до Senior уровня, для любой задачи от дизайна логотипа до дизайна услуг" , "Эксперты в смежных областях по запросам заказчика"]
+-var bad = ["Зачастую менеджера в компании нет, либо же он распределен на несколько команд" , "Платить налоги за дизайнера и обеспечивать его оборудованием, социальным обеспечением и премиями" , "Дизайнеры с опытом работы 8+ лет будут контролировать качество работы до ее завершения" , "Дизайнер Middle/Middle+ уровня, который сосредоточен только на 1 специализации" , "Дизайнер Middle/Middle+ уровня, который сосредоточен только на 1 специализации"]
+section.section.container.container--lines 
+  h2.section-title.title Давайте сравним
+  .compare 
+    .compare__col.compare__chapter.chapter
+      .compare__heading Пункты
+      each val in chapter
+        .compare__item.chapter__item
+          .compare__item-text= val
+          .compare__item-toolbox
+            +sprite('toolbox' , '16' , '16')
+    .compare__col-layout
+      .compare__col.compare__content.compare__content--gray
+        .compare__heading
+          img.compare__heading-image(src="/src/assets/images/logo.svg" alt="")
+        each val in good 
+          .compare__item
+            .compare__icon
+              img.compare__icon-src(src="/src/assets/images/check-green.svg" alt="")
+            .compare__text= val
+      .compare__col.compare__content.compare__content--gray
+        .compare__heading Штатный дизайнер
+        each val in good 
+          .compare__item
+            .compare__icon
+              img.compare__icon-src(src="/src/assets/images/cross-gray.svg" alt="")
+            .compare__text= val
+
