@@ -1,3 +1,5 @@
+@use "../utils/mixins" as *;
+
 .awards {
   display: flex;
   justify-content: space-between;
@@ -14,9 +16,16 @@
     justify-content: space-between;
     max-width: 570px;
     width: 100%;
+    @include media(full) {
+      padding-left: var(--gap);
+    }
+    @include media(full, min-width) {
+      max-width: initial;
+      font-size: 2em;
+    }
   }
   &__image {
-    max-width: 890px;
+    max-width: 1100px;
     width: 100%;
   }
   &__image-src {

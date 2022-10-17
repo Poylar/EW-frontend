@@ -1,6 +1,52 @@
+-var titles = ['Printegy GmbH', 'Kids Fun Palace' , 'Duesseldorf Business School' , 'Space Plus GmbH' , 'Duesseldorf Business School' , 'Space Plus GmbH', 'Duesseldorf Business School' , 'Space Plus GmbH']
+
 section.section.container.container--lines.case-grid-section
   .case-category 
-    .case-category__item.case-category__item--current Вид
-    .case-category__item Дизайн-поддержка
-    .case-category__item Продвижение
-  .case-grid
+    .case-category__item.case-category__item--current(data-tab="web") Веб
+    .case-category__item(data-tab="design-support") Дизайн-поддержка
+    .case-category__item(data-tab="seo") Продвижение
+  .case-grid-wrapper(data-tab-item="web")
+    .case-grid.portfolio-grid.portfolio-grid--small-size
+      each val in titles
+        a.portfolio-grid__item(href="#")
+          .portfolio-grid__image 
+            img.portfolio-grid__src(src="/src/assets/images/case-i.jpg" alt="")
+          .portfolio-grid__info 
+            .portfolio-grid__category
+              span.portfolio-grid__category-item UX/UI Дизайн, 
+              span.portfolio-grid__category-item Фронтенд, 
+              span.portfolio-grid__category-item SEO, 
+              span.portfolio-grid__category-item SMM  
+          h3.portfolio-grid__title.title= val
+    .more-link-wrapper 
+      span.more-link.inner-text Больше кейсов
+  .case-grid-wrapper(data-tab-item="design-support")
+    .case-grid.portfolio-grid.portfolio-grid--small-size
+      each val in titles
+        a.portfolio-grid__item(href="#")
+          .portfolio-grid__image 
+            img.portfolio-grid__src(src="/src/assets/images/b-case.jpg" alt="")
+          .portfolio-grid__info 
+            .portfolio-grid__category
+              span.portfolio-grid__category-item UX/UI Дизайн, 
+              span.portfolio-grid__category-item Фронтенд, 
+              span.portfolio-grid__category-item SEO, 
+              span.portfolio-grid__category-item SMM  
+          h3.portfolio-grid__title.title= val
+    .more-link-wrapper 
+      span.more-link.inner-text Больше кейсов
+  .case-grid-wrapper(data-tab-item="seo")
+    .case-grid.portfolio-grid.portfolio-grid--small-size
+      each val in titles
+        a.portfolio-grid__item(href="#")
+          .portfolio-grid__image 
+            img.portfolio-grid__src(src="/src/assets/images/c-case.jpg" alt="")
+          .portfolio-grid__info 
+            .portfolio-grid__category
+              span.portfolio-grid__category-item UX/UI Дизайн, 
+              span.portfolio-grid__category-item Фронтенд, 
+              span.portfolio-grid__category-item SEO, 
+              span.portfolio-grid__category-item SMM  
+          h3.portfolio-grid__title.title= val
+    .more-link-wrapper 
+      span.more-link.inner-text Больше кейсов

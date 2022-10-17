@@ -1,3 +1,4 @@
+@use "./mixins" as *;
 :root {
   --white: #fff;
   --black: #1a1a1a;
@@ -16,4 +17,9 @@
   --font: HeadingNow;
   --font2: Montserrat;
   --bezier: cubic-bezier(0.075, 0.82, 0.165, 1);
+  @each $breakpoint, $val in $breakpoints {
+    @include media($breakpoint) {
+      --container: #{$val};
+    }
+  }
 }

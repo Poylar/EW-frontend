@@ -12,7 +12,7 @@
   position: relative;
   overflow: hidden;
   color: var(--white);
-
+  cursor: pointer;
   &:before {
     content: "";
     position: absolute;
@@ -41,11 +41,12 @@
     transform: translate3d(0, -100%, 0);
     transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
   }
-  a {
+  .inner-text {
     display: block;
     position: relative;
     mix-blend-mode: difference;
     z-index: 10;
+
   }
   &:hover {
     &:before {
@@ -58,7 +59,7 @@
       transition-delay: 0.4s;
       transition-timing-function: linear;
     }
-    a {
+    .inner-text {
       animation: MoveScaleUpInitial 0.3s forwards, MoveScaleUpEnd 0.3s forwards 0.3s;
     }
   }

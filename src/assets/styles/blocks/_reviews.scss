@@ -1,4 +1,7 @@
 .reviews {
+  &:hover {
+    cursor: url(../../assets/images/cursor-move.svg), auto;
+  }
   &__item {
     display: flex;
     flex-direction: column;
