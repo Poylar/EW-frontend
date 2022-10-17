@@ -5,3 +5,4 @@ import "./HeroContent";
 import "./Spoiler";
 import "./StackContainer";
 import "./Tabs";
+import "./Toolbox";

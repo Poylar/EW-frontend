@@ -11,8 +11,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  color: var(--white);
-  cursor: pointer;
+
   &:before {
     content: "";
     position: absolute;
@@ -46,7 +45,7 @@
     position: relative;
     mix-blend-mode: difference;
     z-index: 10;
-
+    color:var(--white)
   }
   &:hover {
     &:before {

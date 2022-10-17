@@ -15,7 +15,7 @@ panels.forEach((panel, i) => {
     },
   });
 
-  tl.fromTo(panel, { y: 0, rotate: 0, scale: 1 }, { y: 0, rotateX: 0, scale: 0.5 }, 0);
+  tl.fromTo(panel, { y: 0, rotate: 0, scale: 1 }, { y: 0, rotateX: 0, scale: 0.9 }, 0);
 });
 
 const photos = gsap.utils.toArray(".js-scale-image");
