@@ -1,27 +1,93 @@
+.compare-wrapper {
+  max-width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
 .compare {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  &__col {
+  display: table;
+  width: 100%;
+  &__head {
+    display: table-header-group;
+    width: 100%;
+  }
+  &__body {
+    display: table-row-group;
+    width: 100%;
+  }
+  &__row {
+    display: table-row;
+    border: 1px solid var(--gray200);
+    border-collapse: collapse;
+  }
+  &__cell {
+    display: table-cell;
+    border: 1px solid var(--gray200);
+    position: relative;
+    border-collapse: collapse;
+    padding: 24px 40px;
+    min-width: 280px;
+    &:first-child {
+      position: sticky;
+      max-width: 280px;
+      left: 0;
+      background: white;
+      min-width: 109px;
+      vertical-align: middle;
+      z-index: 9;
+    }
+    &:nth-child(2) {
+      background: var(--gray50);
+    }
+  }
+  &__cell-content {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    &--main {
+      flex-direction: column;
+    }
   }
-  &__item {
+  &__cell-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+  }
+  &__cell-text {
+    max-width: 360px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 150%;
+  }
+  &__toolbox-icon {
+    display: inline-block;
+    margin: 0 0 0 12px;
+    vertical-align: middle;
+    color: var(--gray300);
+    cursor: pointer;
+  }
+  &__versus {
+    font-family: var(--font);
+    letter-spacing: -0.01em;
+    font-size: 14px;
+    border: 1px solid var(--gray200);
+    border-radius: 50%;
+    background: var(--white);
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    z-index: 2;
+    width: 50px;
+    height: 50px;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
-}
 
-.chapter {
-  align-items: flex-start;
-  &__item {
-    flex-direction: row;
- 
+  .compare-head {
+    .compare__cell {
+      padding: 32px 10px;
+      text-align: center;
+    }
   }
-}
-
-.compare__col-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }

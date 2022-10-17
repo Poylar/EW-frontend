@@ -1,5 +1,15 @@
 section.container.container--lines.section
-  h2.section-title.title.cta-title Узнайте, что мы можем предложить — это ничего не стоит
+  if manager
+    .cta-heading 
+      h2.section-title.title.cta-title= ctaTitle
+      .cta-manager
+        .cta-manager__image 
+          img.cta-manager__image-src(src="/src/assets/images/manager.jpg" alt="")
+        .cta-manager__info 
+          h6.cta-manager__name Марк Левшиц
+          .cta-manager__text Ваш проектный менеджер, сопровождение проекта и консультации
+  else
+    h2.section-title.title.cta-title Узнайте, что мы можем предложить — это ничего не стоит
   .cta 
     form.cta-form.form(action="")
       label.form__label

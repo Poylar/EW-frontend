@@ -8,6 +8,7 @@
 @use "modules/buttons";
 @use "modules/inputs";
 @use "modules/keyframes";
+@use "modules/hover";
 
 // layout
 @use "layout/base";
@@ -17,6 +18,8 @@
 
 // pages
 @use "pages/home";
+@use "pages/error-404";
+@use "pages/thank-you";
 // blocks
 @use "blocks/hero";
 @use "blocks/portfolio";
@@ -32,3 +35,10 @@
 @use "blocks/timeline-slider";
 @use "blocks/awards";
 @use "blocks/compare-table";
+@use "blocks/grid-image";
+@use "blocks/team-quote";
+@use "blocks/team-member";
+@use "blocks/team-list";
+@use "blocks/case-grid";
+@use "blocks/contacts";
+@use "blocks/btn-row";

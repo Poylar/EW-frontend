@@ -27,7 +27,18 @@ if (moreCaseContainer) {
 const timelineContainer = document.querySelector(".js-timeline-slider");
 if (timelineContainer) {
   new Swiper(timelineContainer, {
-    slidesPerView: 3.2,
+    slidesPerView: 1.1,
     spaceBetween: 40,
+    breakpoints: {
+      768: {
+        slidesPerView: 2.2
+      },
+      1024: {
+        slidesPerView: 3.2,
+      },
+      1620: {
+        slidesPerView: 4.2,
+      },
+    },
   });
 }

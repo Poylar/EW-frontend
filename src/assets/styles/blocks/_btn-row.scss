@@ -1,0 +1,13 @@
+.btn-row {
+  display: flex;
+  align-items: center;
+  &__item {
+    margin: 0 16px 0 0;
+    padding: 20px 36px;
+    font-weight: 500;
+    font-size: 16px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

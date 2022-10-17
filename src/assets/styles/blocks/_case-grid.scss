@@ -1,0 +1,15 @@
+.case-grid-section {
+  --gap-y: 80px !important;
+}
+
+.case-category {
+  display: flex;
+  border-bottom: 1px solid var(--gray200);
+  &__item {
+    padding: 0 24px 20px;
+    cursor: pointer;
+    &--current {
+      border-bottom: 1px solid var(--black);
+    }
+  }
+}

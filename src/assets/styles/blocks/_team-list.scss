@@ -1,0 +1,23 @@
+.team-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 60px 40px;
+  &__item {
+  }
+  &__image {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: calc(427px / 440px * 100%);
+  }
+  &__image-src {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__member {
+    padding: 24px 0 0;
+  }
+}

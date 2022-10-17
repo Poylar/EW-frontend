@@ -1,0 +1,31 @@
+.contacts {
+  display: grid;
+  max-width: 1204px;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 80px;
+  &__heading {
+    font-family: var(--font);
+    font-size: 14px;
+    color: var(--gray500);
+  }
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  font-weight: 500;
+  .contacts__item {
+    margin: 0 0 16px 0;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &--row {
+    flex-direction: row;
+    .contacts__item {
+      margin: 0 16px 0 0;
+    }
+  }
+}

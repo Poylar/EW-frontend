@@ -16,6 +16,10 @@ export default defineConfig({
         landing: resolve(__dirname, "landing.html"),
         designSupport: resolve(__dirname, "design-support.html"),
         team: resolve(__dirname, "team.html"),
+        cases: resolve(__dirname, "cases.html"),
+        contacts: resolve(__dirname, "contacts.html"),
+        error404: resolve(__dirname, "404.html"),
+        seo: resolve(__dirname, "seo.html"),
       },
       output: {
         chunkFileNames: "assets/js/[name]-[hash].js",

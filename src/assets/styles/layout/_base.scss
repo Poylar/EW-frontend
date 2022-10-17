@@ -60,6 +60,12 @@ body {
 
 .section {
   padding-top: var(--gap-y);
+  &--80 {
+    --gap-y: 80px !important;
+  }
+  &--100 {
+    padding-top: 100px;
+  }
   &:last-child {
     padding-bottom: var(--gap-y);
   }
