@@ -20,6 +20,7 @@ export default defineConfig({
         contacts: resolve(__dirname, "contacts.html"),
         error404: resolve(__dirname, "404.html"),
         seo: resolve(__dirname, "seo.html"),
+        thankyou: resolve(__dirname, "thank-you.html"),
       },
       output: {
         chunkFileNames: "assets/js/[name]-[hash].js",

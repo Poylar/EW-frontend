@@ -44,11 +44,7 @@
     padding-bottom: calc(800px / 1360px * 100%);
     position: relative;
     cursor: pointer;
-    &--fixed-height {
-      height: initial;
-      min-height: 800px;
-      padding-bottom: initial;
-    }
+  
   }
   &__desc {
     margin: 64px 0 0;
