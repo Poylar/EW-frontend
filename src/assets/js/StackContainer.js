@@ -20,20 +20,3 @@ panels.forEach((panel, i) => {
   tl.fromTo(panel, 1, { y: 0, rotate: 0, scale: 1, opacity: 1 }, { y: 0, rotateX: 0, scale: 0.9 }, 0).to(panel, 0.1, { opacity: 1 });
 });
 
-const photos = gsap.utils.toArray(".js-scale-image");
-photos.forEach((elem) => {
-  gsap.set(elem, {
-    scale: 1.1,
-  });
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: elem,
-        scrub: 0.4,
-        start: "bottom bottom",
-      },
-    })
-    .to(elem, {
-      scale: 1,
-    });
-});

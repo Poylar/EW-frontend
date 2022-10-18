@@ -2,11 +2,13 @@ include ../inc/mixins/svg-sprite
 include ../inc/mixins/include
 
 include ../inc/layout/header.pug
-main.main
-  -var title = 'Кейсы'
-  -var counter = true
-  include ../inc/blocks/title-hero.pug
-  include ../inc/blocks/case-grid.pug
+#smooth-wrapper 
+  #smooth-content
+    main.main
+      -var title = 'Кейсы'
+      -var counter = true
+      include ../inc/blocks/title-hero.pug
+      include ../inc/blocks/case-grid.pug
 
-  include ../inc/blocks/cta.pug
-include ../inc/layout/footer.pug
+      include ../inc/blocks/cta.pug
+    include ../inc/layout/footer.pug

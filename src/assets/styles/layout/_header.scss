@@ -3,7 +3,11 @@
 
 .header {
   font-weight: 500;
-
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  left: 0;
+  top: 0;
   &__feedback {
     display: flex;
     align-items: center;
@@ -62,7 +66,6 @@
 }
 
 .nav {
-
   .nav-list {
     display: flex;
     flex-wrap: wrap;

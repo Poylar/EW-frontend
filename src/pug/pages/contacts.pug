@@ -2,11 +2,13 @@ include ../inc/mixins/svg-sprite
 include ../inc/mixins/include
 
 include ../inc/layout/header.pug
-main.main
-  - var title = 'Контакты'
-  include ../inc/blocks/title-hero.pug
-  include ../inc/blocks/contacts.pug
-  - var manager = true
-  -var ctaTitle = 'Обсудим проект?'
-  include ../inc/blocks/cta.pug
-include ../inc/layout/footer.pug
+#smooth-wrapper 
+  #smooth-content
+    main.main
+      - var title = 'Контакты'
+      include ../inc/blocks/title-hero.pug
+      include ../inc/blocks/contacts.pug
+      - var manager = true
+      -var ctaTitle = 'Обсудим проект?'
+      include ../inc/blocks/cta.pug
+    include ../inc/layout/footer.pug

@@ -2,12 +2,14 @@ include ../inc/mixins/svg-sprite
 include ../inc/mixins/include
 
 include ../inc/layout/header.pug
-main.main
-  -var title = 'Kids Fun Palace'
-  -var back = true
-  include ../inc/blocks/title-hero.pug
-  include ../inc/blocks/case-info.pug
-  include ../inc/blocks/case-content.pug
-  -var ctaTitle = 'Оставляйте заявочку'
-  include ../inc/blocks/cta.pug
-include ../inc/layout/footer.pug
+#smooth-wrapper 
+  #smooth-content
+    main.main
+      -var title = 'Kids Fun Palace'
+      -var back = true
+      include ../inc/blocks/title-hero.pug
+      include ../inc/blocks/case-info.pug
+      include ../inc/blocks/case-content.pug
+      -var ctaTitle = 'Оставляйте заявочку'
+      include ../inc/blocks/cta.pug
+    include ../inc/layout/footer.pug

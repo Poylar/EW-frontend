@@ -2,13 +2,15 @@ include ../inc/mixins/svg-sprite
 include ../inc/mixins/include
 
 include ../inc/layout/header.pug
-main.main
-  section.section.section--100.container.container--lines
-    .thank-you
-      h1.thank-you__title Класс, спасибо за заявочку!
-      .thank-you__btn-wrapper.btn-row 
-        .thank-you_btn.btn.btn--primary.btn-row__item
-          a.btn__link(href="/") На главную
-        .thank-you_btn.btn.btn--secondary.btn-row__item
-          a.btn__link(href="https://google.com" target="_blank") Стукнуть в ТГ
-include ../inc/layout/footer.pug
+#smooth-wrapper 
+  #smooth-content
+    main.main
+      section.section.section--100.container.container--lines
+        .thank-you
+          h1.thank-you__title Класс, спасибо за заявочку!
+          .thank-you__btn-wrapper.btn-row 
+            .thank-you_btn.btn.btn--primary.btn-row__item
+              a.btn__link(href="/") На главную
+            .thank-you_btn.btn.btn--secondary.btn-row__item
+              a.btn__link(href="https://google.com" target="_blank") Стукнуть в ТГ
+    include ../inc/layout/footer.pug
