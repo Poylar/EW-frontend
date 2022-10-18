@@ -5,12 +5,16 @@ include ../inc/layout/header.pug
 #smooth-wrapper 
   #smooth-content
     main.main
+      -var color =  '#66D674'
+      -var image = '/src/assets/images/landing.png'
+      -var imageM = '/src/assets/images/landing-m.png'
+      -var title = 'Сео-продвижение'
       include ../inc/blocks/services-hero.pug
       include ../inc/blocks/services-features.pug
       include ../inc/blocks/portfolio.pug
       include ../inc/blocks/work-progress.pug
-      include ../inc/blocks/awards.pug
-      include ../inc/blocks/compare-table.pug
+      include ../inc/blocks/features-2.pug
       include ../inc/blocks/cta.pug
       include ../inc/blocks/services-more.pug
     include ../inc/layout/footer.pug
+include ../inc/blocks/modal.pug

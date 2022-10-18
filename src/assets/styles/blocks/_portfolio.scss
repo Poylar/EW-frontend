@@ -14,7 +14,11 @@
   &--small-size {
     grid-template-columns: repeat(3, 1fr);
     @include media(xxl) {
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include media(md) {
+      grid-template-columns: 1fr;
+      gap: 40px;
     }
   }
   &__image {

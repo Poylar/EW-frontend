@@ -2,7 +2,7 @@
   font-family: var(--font);
   font-size: 32px;
   max-width: 900px;
-  line-height: 32px;
+  line-height: 140%;
   p {
     margin-bottom: 30px;
   }
@@ -13,6 +13,9 @@
     width: 100%;
     height: auto;
     margin-bottom: 40px;
+    &:last-child {
+      margin: 0;
+    }
   }
 }
 
@@ -20,4 +23,7 @@
   display: flex;
   justify-content: space-between;
   margin: 160px 0 80px 0;
+  .case-text {
+    line-height: 133%;
+  }
 }

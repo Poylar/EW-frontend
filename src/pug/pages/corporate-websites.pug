@@ -1,0 +1,20 @@
+include ../inc/mixins/svg-sprite
+include ../inc/mixins/include
+
+include ../inc/layout/header.pug
+#smooth-wrapper 
+  #smooth-content
+    main.main
+      -var color =  '#E6FE51'
+      -var image = '/src/assets/images/corp.png'
+      -var imageM = '/src/assets/images/corp-m.png'
+      -var title = 'Корпоративные сайты'
+      include ../inc/blocks/services-hero.pug
+      include ../inc/blocks/services-features.pug
+      include ../inc/blocks/black-bg-block.pug
+      include ../inc/blocks/portfolio.pug
+      include ../inc/blocks/work-progress.pug
+      include ../inc/blocks/cta.pug
+      include ../inc/blocks/services-more.pug
+    include ../inc/layout/footer.pug
+include ../inc/blocks/modal.pug

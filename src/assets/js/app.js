@@ -7,3 +7,4 @@ import "./StackContainer";
 import "./Tabs";
 import "./Toolbox";
 import "./SmoothScroll";
+import "./Modal";

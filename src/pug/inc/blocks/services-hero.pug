@@ -1,12 +1,14 @@
 section.container.container--lines.hero-section.hero.case-hero 
-  h1.hero__title.title Лендинги
+  h1.hero__title.title= title
   .services-offer
     h4.services-offer__title Что мы предлагаем
     .services-offer__desc Офигенные, продуманные лендинги с крутым сторителлингом для любого проекта
-  .hero__content.hero-content(style="--background-color: #4655D8")
+  .hero__content.hero-content(style="--background-color:" + color + "")
     .hero-content-inner 
       .hero-content__image 
-        img.hero-content__image-src(src="/src/assets/images/landings.png" alt="")
+        picture 
+          source( media="(max-width:769px)" srcset=""+ imageM +"")
+          img.hero-content__image-src( src=""+ image +"")
 
 
 

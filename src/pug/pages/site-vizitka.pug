@@ -1,0 +1,20 @@
+include ../inc/mixins/svg-sprite
+include ../inc/mixins/include
+
+include ../inc/layout/header.pug
+#smooth-wrapper 
+  #smooth-content
+    main.main
+      -var color =  '#FFC46B'
+      -var image = '/src/assets/images/vizitka.png'
+      -var imageM = '/src/assets/images/vizitka-m.png'
+      -var title = 'Сайт-визитка'
+      include ../inc/blocks/services-hero.pug
+      include ../inc/blocks/services-features.pug
+      include ../inc/blocks/features.pug
+      include ../inc/blocks/portfolio.pug
+      include ../inc/blocks/work-progress.pug
+      include ../inc/blocks/cta.pug
+      include ../inc/blocks/services-more.pug
+    include ../inc/layout/footer.pug
+include ../inc/blocks/modal.pug
