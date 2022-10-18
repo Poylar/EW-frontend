@@ -9,6 +9,11 @@ html {
   scroll-behavior: smooth;
 }
 
+#smooth-content {
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
 .root {
   overflow-x: hidden;
 }
@@ -74,6 +79,10 @@ body {
 
 .section {
   padding-top: var(--gap-y);
+  &--bottom-space {
+    --gap-y: 120px;
+    padding-bottom: var(--gap-y);
+  }
   &--80 {
     --gap-y: 80px !important;
   }

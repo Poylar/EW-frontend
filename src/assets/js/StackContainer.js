@@ -7,16 +7,17 @@ panels.forEach((panel, i) => {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: panel,
-      start: "bottom bottom",
-
+      start: "bottom center",
+      end: "+=" + panel.offsetHeight * panels.length,
       pinSpacing: false,
-      pin: true,
+      pin: false,
       scrub: true,
       markers: true,
-      onRefresh: () => gsap.set(panel, { transformOrigin: "center " + (panel.offsetHeight - window.innerHeight / 2) + "px" }),
+      onRefresh: () => gsap.set(panel, { transformOrigin: "bottom " + (panel.offsetHeight - window.innerHeight / 2) + "px" }),
     },
   });
 
-  tl.fromTo(panel, 1, { y: 0, rotate: 0, scale: 1, opacity: 1 }, { y: 0, rotateX: 0, scale: 0.9 }, 0).to(panel, 0.1, { opacity: 1 });
+  tl.fromTo(panel, { y: 0, rotate: 0, scale: 1, opacity: 1 }, { y: panel.offsetHeight * 2, rotateX: 0, scale: 0.9 }, 0).to(panel, 0.1, {
+    opacity: 1,
+  });
 });
-
