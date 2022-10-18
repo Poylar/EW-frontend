@@ -7,7 +7,7 @@ panels.forEach((panel, i) => {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: panel,
-      start: "bottom center",
+      start: "bottom bottom",
       end: "+=" + panel.offsetHeight * panels.length,
       pinSpacing: false,
       pin: false,
@@ -17,7 +17,7 @@ panels.forEach((panel, i) => {
     },
   });
 
-  tl.fromTo(panel, { y: 0, rotate: 0, scale: 1, opacity: 1 }, { y: panel.offsetHeight * 2, rotateX: 0, scale: 0.9 }, 0).to(panel, 0.1, {
+  tl.fromTo(panel, { y: 0, rotate: 0, scale: 1, opacity: 1 }, { y: panel.offsetHeight, scale: 0.9 }, 0).to(panel, 0.1, {
     opacity: 1,
   });
 });
