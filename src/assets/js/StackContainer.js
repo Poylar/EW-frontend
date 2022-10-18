@@ -8,16 +8,16 @@ panels.forEach((panel, i) => {
     scrollTrigger: {
       trigger: panel,
       start: "bottom bottom",
-      end: "+=" + panel.offsetHeight * panels.length,
+      end: "+=" + panel.offsetHeight * (i + 1),
       pinSpacing: false,
-      pin: false,
+      pin:false,
       scrub: true,
       markers: true,
       onRefresh: () => gsap.set(panel, { transformOrigin: "bottom " + (panel.offsetHeight - window.innerHeight / 2) + "px" }),
     },
   });
 
-  tl.fromTo(panel, { y: 0, rotate: 0, scale: 1, opacity: 1 }, { y: panel.offsetHeight, scale: 0.9 }, 0).to(panel, 0.1, {
+  tl.fromTo(panel, { y: 0, rotate: 0, scale: 1, opacity: 1 }, { y: panel.offsetHeight / 100 * 25, scale: 0.9 }, 0).to(panel, 0.1, {
     opacity: 1,
   });
 });
