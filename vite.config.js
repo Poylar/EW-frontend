@@ -21,6 +21,8 @@ export default defineConfig({
         error404: resolve(__dirname, "404.html"),
         seo: resolve(__dirname, "seo.html"),
         thankyou: resolve(__dirname, "thank-you.html"),
+        corporatewebsites: resolve(__dirname, "corporate-websites.html"),
+        sitevizitka: resolve(__dirname, "site-vizitka.html"),
         case: resolve(__dirname, "case.html"),
       },
       output: {
