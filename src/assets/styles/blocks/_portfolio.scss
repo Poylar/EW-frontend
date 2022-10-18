@@ -2,8 +2,15 @@
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
   gap: 60px 40px;
+  @include media(xl) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media(md) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
   &--small-size {
     grid-template-columns: repeat(3, 1fr);
     @include media(xxl) {
@@ -16,6 +23,9 @@
     width: 100%;
     padding-bottom: calc(420px / 660px * 100%);
     position: relative;
+    @include media(md) {
+      padding-bottom: calc(208px / 328px * 100%);
+    }
   }
   &__src {
     position: absolute;
@@ -27,12 +37,22 @@
   }
   &__info {
     padding-top: 32px;
+    @include media(md) {
+      padding-top: 24px;
+    }
   }
   &__category {
     color: var(--gray500);
     margin: 0 0 16px 0;
+    @include media(md) {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
   }
   &__title {
     font-size: 24px;
+    @include media(md) {
+      font-size: 20px;
+    }
   }
 }

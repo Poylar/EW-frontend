@@ -1,0 +1,12 @@
+.back-btn {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin-bottom: 40px;
+  &__icon {
+    margin: 0 16px 0 0;
+    .svg-icon {
+      color:var(--gray200)
+    }
+  }
+}

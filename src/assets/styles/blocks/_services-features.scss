@@ -1,9 +1,16 @@
+@use "../utils/mixins" as *;
 .services-features {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  @include media(xl) {
+    flex-direction: column;
+  }
   &__title {
     font-size: 40px;
+    @include media(xl) {
+      margin-bottom: 60px;
+    }
   }
   &__list {
     max-width: 660px;

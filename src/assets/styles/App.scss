@@ -31,7 +31,7 @@
 @use "blocks/services-features";
 @use "blocks/black-bg-block";
 @use "blocks/work-progress";
-@use "blocks/more-case";
+@use "blocks/services-more";
 @use "blocks/timeline-slider";
 @use "blocks/awards";
 @use "blocks/compare-table";
@@ -42,3 +42,8 @@
 @use "blocks/case-grid";
 @use "blocks/contacts";
 @use "blocks/btn-row";
+@use "blocks/back-btn";
+@use "blocks/case-info";
+@use "blocks/case-content";
+@use "blocks/case-more";
+@use "blocks/mobile-btn";

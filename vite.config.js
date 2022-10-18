@@ -21,13 +21,14 @@ export default defineConfig({
         error404: resolve(__dirname, "404.html"),
         seo: resolve(__dirname, "seo.html"),
         thankyou: resolve(__dirname, "thank-you.html"),
+        case: resolve(__dirname, "case.html"),
       },
       output: {
-        chunkFileNames: "assets/js/[name]-[hash].js",
+        chunkFileNames: "assets/js/app-[hash].js",
         entryFileNames: "assets/js/[name]-[hash].js",
         assetFileNames: ({ name }) => {
-          if (/\.(gif|jpe?g|png|svg)$/.test(name ?? "")) {
-            return "assets/images/[name]-[hash][extname]";
+          if (/\.(gif|jpe?g|png|svg|mp4)$/.test(name ?? "")) {
+            return "assets/media/[name]-[hash][extname]";
           }
 
           if (/\.css$/.test(name ?? "")) {
@@ -56,32 +57,32 @@ export default defineConfig({
       symbolId: "[name]",
       iconDirs: [path.resolve(process.cwd(), "src/assets/images/icons")],
     }),
-    viteImagemin({
-      gifsicle: {
-        optimizationLevel: 7,
-        interlaced: false,
-      },
-      optipng: {
-        optimizationLevel: 7,
-      },
-      mozjpeg: {
-        quality: 100,
-      },
-      pngquant: {
-        quality: [0.8, 0.9],
-        speed: 4,
-      },
-      svgo: {
-        plugins: [
-          {
-            name: "removeViewBox",
-          },
-          {
-            name: "removeEmptyAttrs",
-            active: false,
-          },
-        ],
-      },
-    }),
+    // viteImagemin({
+    //   gifsicle: {
+    //     optimizationLevel: 7,
+    //     interlaced: false,
+    //   },
+    //   optipng: {
+    //     optimizationLevel: 7,
+    //   },
+    //   mozjpeg: {
+    //     quality: 100,
+    //   },
+    //   pngquant: {
+    //     quality: [0.8, 0.9],
+    //     speed: 4,
+    //   },
+    //   svgo: {
+    //     plugins: [
+    //       {
+    //         name: "removeViewBox",
+    //       },
+    //       {
+    //         name: "removeEmptyAttrs",
+    //         active: false,
+    //       },
+    //     ],
+    //   },
+    // }),
   ],
 });

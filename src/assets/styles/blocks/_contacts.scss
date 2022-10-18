@@ -1,9 +1,18 @@
+@use "../utils/mixins" as *;
+
 .contacts {
   display: grid;
   max-width: 1204px;
   width: 100%;
   grid-template-columns: repeat(4, 1fr);
   gap: 80px;
+  @include media(xl) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media(md) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 32px;
+  }
   &__heading {
     font-family: var(--font);
     font-size: 14px;

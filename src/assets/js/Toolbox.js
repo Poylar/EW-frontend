@@ -10,7 +10,7 @@ document.addEventListener("click", (e) => {
       });
       isOpen = false;
     });
-  } else if (!isOpen && e.target.closest(".js-toolbox")) {
+  } else if (e.target.closest(".js-toolbox")) {
     const tl = gsap.timeline();
     const toolbox = e.target.closest(".js-toolbox").querySelector(".js-toolbox-content");
     tl.fromTo(

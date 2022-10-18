@@ -1,0 +1,21 @@
+.case-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 777px;
+  &__col {
+    max-width: 310px;
+  }
+  &__heading {
+    font-size: 18px;
+    color: var(--gray500);
+    margin-bottom: 24px;
+  }
+  &__item {
+    font-family: var(--font);
+    margin-bottom: 12px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

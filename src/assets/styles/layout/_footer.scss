@@ -9,16 +9,37 @@
     max-width: 900px;
     width: 100%;
     flex: 1;
+    @include media(md) {
+      margin-top: 40px;
+      flex-direction: column;
+    }
   }
   &__nav {
+    @include media(md) {
+      margin-bottom: 32px;
+      &:last-child {
+        margin: 0;
+      }
+    }
     &:last-child {
       padding: 0 32px 0 0;
+      @include media(md) {
+        padding: 0;
+      }
+    }
+  }
+  &__logo {
+    @include media(xl) {
+      margin-right: 2rem;
     }
   }
   .nav-list {
     &__item {
       font-size: 16px;
       margin: 0 0 18px 0;
+      @include media(md) {
+        margin-bottom: 12px;
+      }
       &:last-child {
         margin: 0;
       }
@@ -61,6 +82,9 @@
     font-size: 14px;
     position: relative;
     white-space: nowrap;
+    @include media(md) {
+      margin-top: 12px;
+    }
     &:hover {
       &:before {
         transform-origin: 0% 50%;
@@ -88,6 +112,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding-bottom: 80px;
+  @include media(md) {
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
 }
 
 .footer-bottom {
@@ -95,4 +123,9 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 48px;
+  @include media(md) {
+    flex-direction: column;
+    padding-bottom: 40px;
+    align-items: flex-start;
+  }
 }

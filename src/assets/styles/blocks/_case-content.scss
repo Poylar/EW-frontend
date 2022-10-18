@@ -1,0 +1,23 @@
+.case-text {
+  font-family: var(--font);
+  font-size: 32px;
+  max-width: 900px;
+  line-height: 32px;
+  p {
+    margin-bottom: 30px;
+  }
+}
+
+.case-gallery {
+  img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+  }
+}
+
+.case-about {
+  display: flex;
+  justify-content: space-between;
+  margin: 160px 0 80px 0;
+}

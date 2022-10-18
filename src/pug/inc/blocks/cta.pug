@@ -9,7 +9,11 @@ section.container.container--lines.section
           h6.cta-manager__name Марк Левшиц
           .cta-manager__text Ваш проектный менеджер, сопровождение проекта и консультации
   else
-    h2.section-title.title.cta-title Узнайте, что мы можем предложить — это ничего не стоит
+
+    if ctaTitle
+      h2.section-title.title.cta-title #{ctaTitle}
+    else 
+      h2.section-title.title.cta-title Узнайте, что мы можем предложить — это ничего не стоит
   .cta 
     form.cta-form.form(action="")
       label.form__label
@@ -24,7 +28,7 @@ section.container.container--lines.section
         input.form__input(type="text" placeholder="Бюджет")
       .form__block-attachment
         label.form__label.form__label--full
-          textarea.form__input.form__input--textarea(type="text" placeholder="Расскажите о проекте")
+          textarea.form__input.form__input--textarea( placeholder="Расскажите о проекте")
         label.form__label.form__label--file
           input.form__input.form__input--file.js-file(type="file" multiple)
       span.files-list.js-file-output

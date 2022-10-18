@@ -3,19 +3,40 @@
 
 .header {
   font-weight: 500;
+
   &__feedback {
     display: flex;
     align-items: center;
     font-size: 14px;
+    @include media(xl) {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    @include media(md) {
+      margin: 0 23px 0 auto;
+    }
   }
   &__phone {
     margin: 0 32px 0 0;
+    @include media(xl) {
+      margin: 0 0 0.5rem 0;
+    }
+    @include media(md) {
+      margin: 0 0 8px 0;
+    }
   }
   &__logo {
     margin: 0 40px 0 0;
   }
   &__nav {
     margin: 0 auto 0 0;
+    @include media(xl) {
+      flex: 1;
+      margin: 0;
+    }
+    @include media(md) {
+      display: none;
+    }
   }
   &__feedback-btn {
     cursor: pointer;
@@ -41,15 +62,23 @@
 }
 
 .nav {
+
   .nav-list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     font-size: 14px;
+    @include media(xl) {
+      font-size: 12px;
+      justify-content: space-between;
+    }
   }
   &__item {
     margin: 0 28px 0 0;
     letter-spacing: -0.01em;
+    @include media(xl) {
+      margin: 0 10px 0 0;
+    }
     &--current {
       position: relative;
       &:before {

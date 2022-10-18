@@ -22,6 +22,9 @@ body {
   font-weight: 400;
   min-width: 320px;
   overflow-x: hidden;
+  @include media(md) {
+    font-size: 16px;
+  }
 }
 
 .oh {

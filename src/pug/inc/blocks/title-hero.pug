@@ -1,4 +1,9 @@
 section.container.container--lines.hero-section.hero.case-hero 
+  unless !back
+    a.back-btn(href="/EW-frontend/cases.html") 
+      .back-btn__icon 
+        +sprite('back' , '36' , '36')
+      .back-btn__text Вернуться к кейсам
   h1.hero__title.hero__title--counter.title #{title}
     unless !counter  
       .hero__counter 24

@@ -5,6 +5,7 @@
   justify-content: space-between;
   background: var(--black);
   color: var(--white);
+ 
   &__content {
     padding-left: calc((100% - var(--container)) / 2 + var(--gap));
     padding-top: 120px;
