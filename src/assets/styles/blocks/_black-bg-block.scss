@@ -3,10 +3,8 @@
   padding: 120px 0;
 }
 
-
-
 .full-width-block {
-  padding: 0;
+
   + .section {
     --gap-y: 120px;
   }

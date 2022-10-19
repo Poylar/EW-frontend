@@ -1,3 +1,5 @@
+@use "../utils/mixins" as *;
+
 .reviews {
   &:hover {
     cursor: url(../../assets/images/cursor-move.svg), auto;
@@ -12,6 +14,9 @@
     font-family: var(--font);
     font-size: 32px;
     line-height: 140%;
+    @include media(md) {
+      font-size: 20px;
+    }
   }
 }
 
@@ -23,6 +28,11 @@
     width: 64px;
     height: 64px;
     margin: 0 20px 0 0;
+    @include media(md) {
+      width: 48px;
+      height: 48px;
+      margin: 0 16px 0 0;
+    }
   }
   &__photo-src {
     width: 100%;
@@ -33,9 +43,15 @@
     font-size: 20px;
     margin: 0 0 4px 0;
     font-family: var(--font);
+    @include media(md) {
+      font-size: 16px;
+    }
   }
   &__position {
     color: var(--gray500);
     font-size: 16px;
+    @include media(md) {
+      font-size: 14px;
+    }
   }
 }

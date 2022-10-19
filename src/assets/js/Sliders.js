@@ -4,7 +4,7 @@ import "swiper/scss";
 const reviewSliderContainer = document.querySelector(".js-reviews-slider");
 if (reviewSliderContainer) {
   new Swiper(reviewSliderContainer, {
-    slidesPerView: 1.2,
+    slidesPerView: 1.1,
     spaceBetween: 16,
     breakpoints: {
       768: {
@@ -20,7 +20,7 @@ if (reviewSliderContainer) {
 const moreCaseContainer = document.querySelector(".js-services-more-slider");
 if (moreCaseContainer) {
   new Swiper(moreCaseContainer, {
-    slidesPerView: 1.2,
+    slidesPerView: 1.1,
     spaceBetween: 16,
     breakpoints: {
       768: {

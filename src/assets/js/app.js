@@ -8,3 +8,4 @@ import "./Tabs";
 import "./Toolbox";
 import "./SmoothScroll";
 import "./Modal";
+import "./Menu";

@@ -20,6 +20,32 @@ html {
 
 .main {
   margin-top: 86px;
+  position: relative;
+  @include media(md) {
+   margin-top: 64px;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: var(--gap);
+    width: 1px;
+    height: 100%;
+    display: block;
+    background: var(--gray200);
+    z-index: -1;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: var(--gap);
+    width: 1px;
+    height: 100%;
+    display: block;
+    background: var(--gray200);
+    z-index: -1;
+  }
 }
 
 picture {

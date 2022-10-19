@@ -34,9 +34,11 @@ section.container.container--lines.section
       span.files-list.js-file-output
       .form__block-bottom
         label.form__label.form__label--full
-          input.form__input.form__input--checkbox(type="checkbox")
-          span.form__checkbox-text Я согласен с условиями 
-            a.form__checkbox-link(href="") обработки персональных данных 
+          input.form__input.form__input--checkbox(type="checkbox" checked)
+          .form__checkbox-wrapper
+            .form__fake-checkbox 
+            span.form__checkbox-text Я согласен с условиями 
+              a.form__checkbox-link(href="/EW-frontend/policy.html") обработки персональных данных 
         button.form__submit.btn.btn--primary
           span  Отправить
 

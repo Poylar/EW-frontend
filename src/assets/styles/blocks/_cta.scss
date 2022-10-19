@@ -13,8 +13,10 @@
 
 .cta-title {
   margin: 0 0 72px 0;
+  @include media(md) {
+    margin: 0 0 48px 0;
+  }
 }
-
 
 .cta-heading {
   display: flex;
