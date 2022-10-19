@@ -9,3 +9,4 @@ import "./Toolbox";
 import "./SmoothScroll";
 import "./Modal";
 import "./Menu";
+import "./SplitText";

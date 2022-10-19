@@ -11,6 +11,11 @@
     @include media(xl) {
       margin-bottom: 60px;
     }
+    @include media(md) {
+      font-size: 32px;
+      line-height: 125%;
+      margin-bottom: 40px;
+    }
   }
   &__list {
     max-width: 660px;
@@ -19,14 +24,25 @@
     font-family: var(--font);
     font-size: 20px;
     margin: 0 0 32px 0;
+    @include media(md) {
+      font-size: 16px;
+      margin: 0 0 16px 0;
+    }
   }
   &__desc {
     line-height: 150%;
+    @include media(md) {
+      font-size: 16px;
+    }
   }
   &__item {
     margin: 0 0 40px 0;
     padding-bottom: 40px;
     border-bottom: 1px solid var(--gray200);
+    @include media(md) {
+      margin: 0 0 32px 0;
+      padding-bottom: 38px;
+    }
     &:last-child {
       margin: 0;
       padding: 0;

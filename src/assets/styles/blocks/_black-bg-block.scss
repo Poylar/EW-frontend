@@ -1,12 +1,19 @@
+@use "../utils/mixins" as *;
+
 .black-bg-block {
   background: var(--black);
   padding: 120px 0;
+  @include media(md) {
+    padding: 60px 0;
+  }
 }
 
 .full-width-block {
-
   + .section {
     --gap-y: 120px;
+    @include media(md) {
+      --gap-y: 60px;
+    }
   }
 }
 
@@ -15,6 +22,9 @@
   column-gap: 30px;
   justify-content: space-between;
   color: var(--white);
+  @include media(xl) {
+    flex-direction: column;
+  }
 }
 
 .block {
@@ -26,11 +36,21 @@
     max-width: 340px;
     width: 100%;
     flex: 1;
+    @include media(xl) {
+      max-width: initial;
+      margin-bottom: 32px;
+    }
+    @include media(md) {
+      font-size: 16px;
+    }
   }
   &__content {
     font-family: var(--font);
     font-size: 40px;
     line-height: 130%;
     max-width: 900px;
+    @include media(md) {
+      font-size: 20px;
+    }
   }
 }
