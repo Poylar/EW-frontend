@@ -1,19 +1,88 @@
--var titles = ['Printegy GmbH', 'Kids Fun Palace' , 'Duesseldorf Business School' , 'Space Plus GmbH' , 'Duesseldorf Business School' , 'Space Plus GmbH']
+-var items = [['Printegy GmbH', 'Kids Fun Palace' , 'Duesseldorf Business School' , 'Space Plus GmbH' , 'Duesseldorf Business School' , 'Space Plus GmbH'], ['/src/assets/images/case-1.jpg' , '/src/assets/images/case-2.jpg'] , '/src/assets/video/case.mp4']
 
 section.container.container--lines.section
   h2.section-title.title Работы, которыми мы гордимся
   .home-portfolio.portfolio-grid
-    each val in titles
-      a.portfolio-grid__item(href="")
-        .portfolio-grid__image 
-          video.portfolio-grid__src(src="/src/assets/video/case.mp4" autoplay loop muted alt="")
-        .portfolio-grid__info 
-          .portfolio-grid__category
-            span.portfolio-grid__category-item UX/UI Дизайн, 
-            span.portfolio-grid__category-item Фронтенд, 
-            span.portfolio-grid__category-item SEO, 
-            span.portfolio-grid__category-item SMM  
-        h3.portfolio-grid__title.title= val
+    a.portfolio-grid__item(href="")
+      .portfolio-grid__image 
+        video.portfolio-grid__src(src="/src/assets/video/case.mp4" autoplay loop muted alt="")
+      .portfolio-grid__info 
+        .portfolio-grid__category
+          span.portfolio-grid__category-item UX/UI Дизайн, 
+          span.portfolio-grid__category-item Фронтенд, 
+          span.portfolio-grid__category-item SEO, 
+          span.portfolio-grid__category-item SMM  
+      h3.portfolio-grid__title.title Printegy GmbH
+    a.portfolio-grid__item(href="")
+      .portfolio-grid__image 
+        img.portfolio-grid__src(src="/src/assets/images/case-1.jpg" autoplay loop muted alt="")
+      .portfolio-grid__info 
+        .portfolio-grid__category
+          span.portfolio-grid__category-item UX/UI Дизайн, 
+          span.portfolio-grid__category-item Фронтенд, 
+          span.portfolio-grid__category-item SEO, 
+          span.portfolio-grid__category-item SMM  
+      h3.portfolio-grid__title.title Printegy GmbH
+    a.portfolio-grid__item(href="")
+      .portfolio-grid__image 
+        img.portfolio-grid__src(src="/src/assets/images/case-2.jpg" autoplay loop muted alt="")
+      .portfolio-grid__info 
+        .portfolio-grid__category
+          span.portfolio-grid__category-item UX/UI Дизайн, 
+          span.portfolio-grid__category-item Фронтенд, 
+          span.portfolio-grid__category-item SEO, 
+          span.portfolio-grid__category-item SMM  
+      h3.portfolio-grid__title.title Printegy GmbH
+    a.portfolio-grid__item(href="")
+      .portfolio-grid__image 
+        img.portfolio-grid__src(src="/src/assets/images/case-1.jpg" autoplay loop muted alt="")
+      .portfolio-grid__info 
+        .portfolio-grid__category
+          span.portfolio-grid__category-item UX/UI Дизайн, 
+          span.portfolio-grid__category-item Фронтенд, 
+          span.portfolio-grid__category-item SEO, 
+          span.portfolio-grid__category-item SMM  
+      h3.portfolio-grid__title.title Printegy GmbH
+    a.portfolio-grid__item(href="")
+      .portfolio-grid__image 
+        video.portfolio-grid__src(src="/src/assets/video/case.mp4" autoplay loop muted alt="")
+      .portfolio-grid__info 
+        .portfolio-grid__category
+          span.portfolio-grid__category-item UX/UI Дизайн, 
+          span.portfolio-grid__category-item Фронтенд, 
+          span.portfolio-grid__category-item SEO, 
+          span.portfolio-grid__category-item SMM  
+      h3.portfolio-grid__title.title Printegy GmbH
+    a.portfolio-grid__item(href="")
+      .portfolio-grid__image 
+        img.portfolio-grid__src(src="/src/assets/images/case-1.jpg" autoplay loop muted alt="")
+      .portfolio-grid__info 
+        .portfolio-grid__category
+          span.portfolio-grid__category-item UX/UI Дизайн, 
+          span.portfolio-grid__category-item Фронтенд, 
+          span.portfolio-grid__category-item SEO, 
+          span.portfolio-grid__category-item SMM  
+      h3.portfolio-grid__title.title Printegy GmbH
+    a.portfolio-grid__item(href="")
+      .portfolio-grid__image 
+        img.portfolio-grid__src(src="/src/assets/images/case-2.jpg" autoplay loop muted alt="")
+      .portfolio-grid__info 
+        .portfolio-grid__category
+          span.portfolio-grid__category-item UX/UI Дизайн, 
+          span.portfolio-grid__category-item Фронтенд, 
+          span.portfolio-grid__category-item SEO, 
+          span.portfolio-grid__category-item SMM  
+      h3.portfolio-grid__title.title Printegy GmbH
+    a.portfolio-grid__item(href="")
+      .portfolio-grid__image 
+        img.portfolio-grid__src(src="/src/assets/images/case-1.jpg" autoplay loop muted alt="")
+      .portfolio-grid__info 
+        .portfolio-grid__category
+          span.portfolio-grid__category-item UX/UI Дизайн, 
+          span.portfolio-grid__category-item Фронтенд, 
+          span.portfolio-grid__category-item SEO, 
+          span.portfolio-grid__category-item SMM  
+      h3.portfolio-grid__title.title Printegy GmbH
   .more-link-wrapper 
-    a.more-link.inner-text(href="#") Смотреть все кейсы
+    a.more-link.inner-text(href="/EW-frontend/cases.html") Смотреть все кейсы
 
