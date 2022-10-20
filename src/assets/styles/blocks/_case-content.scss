@@ -1,10 +1,20 @@
-.case-text {
+@use "../utils/mixins" as *;
+
+.case-text-enter {
   font-family: var(--font);
   font-size: 32px;
   max-width: 900px;
   line-height: 140%;
+  margin: 120px 0;
+  @include media(md) {
+    font-size: 24px;
+    margin: 80px 0 50px 0;
+  }
   p {
     margin-bottom: 30px;
+    &:last-child {
+      margin: 0;
+    }
   }
 }
 
@@ -13,6 +23,9 @@
     width: 100%;
     height: auto;
     margin-bottom: 40px;
+    @include media(md) {
+      margin-bottom: 16px;
+    }
     &:last-child {
       margin: 0;
     }
@@ -23,7 +36,23 @@
   display: flex;
   justify-content: space-between;
   margin: 160px 0 80px 0;
+  @include media(md) {
+    flex-direction: column;
+    margin: 80px 0 60px 0;
+  }
+  &__title {
+    color: var(--gray500);
+    font-size: 16px;
+    @include media(md) {
+      margin-bottom: 32px;
+    }
+  }
   .case-text {
     line-height: 133%;
+    font-size: 32px;
+    @include media(md) {
+      font-size: 20px;
+      font-family: var(--font);
+    }
   }
 }

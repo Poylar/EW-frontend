@@ -17,53 +17,39 @@
   @include media(md) {
     margin-top: 50px;
   }
-  &:before {
-    content: "";
+  .inner-text {
+    position: relative;
+    z-index: 2;
+  }
+  &:before,
+  &:after {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    width: 120%;
-    height: 0;
-    padding-bottom: 25%;
-    top: -110%;
-    left: -10%;
+    top: 50%;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: var(--black);
     border-radius: 50%;
-    transform: translate3d(0, 68%, 0) scale3d(0, 0, 0);
+  }
+  &:before {
+    left: -20px;
+    transform: translate(-50%, -50%);
   }
   &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    transform: translate3d(0, -100%, 0);
-    transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
-  }
-  .inner-text {
-    display: block;
-    position: relative;
-    mix-blend-mode: difference;
-    z-index: 10;
-    color: var(--black);
+    right: -20px;
+    transform: translate(50%, -50%);
   }
   &:hover {
+    color: var(--white);
     &:before {
-      transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-      transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+      animation: criss-cross-left 1.2s both;
+
+      animation-direction: alternate;
     }
     &:after {
-      transform: translate3d(0, 0, 0);
-      transition-duration: 0.05s;
-      transition-delay: 0.4s;
-      transition-timing-function: linear;
-    }
-    .inner-text {
-      animation: MoveScaleUpInitial 0.3s forwards, MoveScaleUpEnd 0.3s forwards 0.3s;
+      animation: criss-cross-right 1.2s both;
+
+      animation-direction: alternate;
     }
   }
 }

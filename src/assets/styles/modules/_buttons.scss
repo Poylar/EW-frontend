@@ -7,97 +7,43 @@
   position: relative;
   font-weight: 500;
   transition: color 800ms;
-  &--1 {
-    span {
-      position: relative;
-      z-index: 2;
-    }
-    &:before,
-    &:after {
-      position: absolute;
-      top: 50%;
-      content: "";
-      width: 20px;
-      height: 20px;
-      background-color: var(--black);
-      border-radius: 50%;
-    }
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+  &:before,
+  &:after {
+    position: absolute;
+    top: 50%;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: var(--black);
+    border-radius: 50%;
+  }
+  &:before {
+    left: -20px;
+    transform: translate(-50%, -50%);
+  }
+  &:after {
+    right: -20px;
+    transform: translate(50%, -50%);
+  }
+  &:hover {
+    color: var(--white);
     &:before {
-      left: -20px;
-      transform: translate(-50%, -50%);
+      animation: criss-cross-left 0.8s both;
+
+      animation-direction: alternate;
     }
     &:after {
-      right: -20px;
-      transform: translate(50%, -50%);
-    }
-    &:hover {
-      color: var(--white);
-      &:before {
-        animation: criss-cross-left 0.8s both;
+      animation: criss-cross-right 0.8s both;
 
-        animation-direction: alternate;
-      }
-      &:after {
-        animation: criss-cross-right 0.8s both;
-
-        animation-direction: alternate;
-      }
+      animation-direction: alternate;
     }
   }
-  &--2 {
-    &:before,
-    &:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      width: 25.25%;
-      height: 0;
-      background-color: var(--black);
-      transition: 0.5s;
-      z-index: 1;
-    }
-    &:before {
-      left: 0;
-    }
-    &:after {
-      left: 50%;
-    }
-    span {
-      &:before,
-      &:after {
-        content: "";
-        position: absolute;
-        top: auto;
-        bottom: 0;
-        width: 25.25%;
-        height: 0;
-        background-color: var(--black);
-        transition: 0.5s;
-        z-index: 1;
-      }
-      &:before {
-        left: 25%;
-      }
-      &:after {
-        left: 75%;
-      }
-    }
-    &:hover {
-      &:before,
-      &:after {
-        height: 80px;
-      }
-      span {
-        color: var(--white);
 
-        z-index: 2;
-        &:before,
-        &:after {
-          height: 80px;
-        }
-      }
-    }
-  }
   &--primary {
     background: var(--green);
   }
