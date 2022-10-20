@@ -1,3 +1,5 @@
+@use "../utils/mixins" as *;
+
 .compare-wrapper {
   max-width: 100%;
   overflow-y: hidden;
@@ -27,25 +29,43 @@
     position: relative;
     border-collapse: collapse;
     padding: 24px 40px;
-    min-width: 280px;
+    min-width: 210px;
+    @include media(md) {
+      padding: 20px var(--gap);
+    }
     &:first-child {
       position: sticky;
-      max-width: 280px;
+      width: 280px;
+      min-width: initial;
       left: 0;
       background: white;
-      min-width: 109px;
       vertical-align: middle;
       z-index: 9;
+      @include media(md) {
+        max-width: 140px;
+      }
     }
     &:nth-child(2) {
       background: var(--gray50);
     }
   }
+  &__cell-heading {
+    @include media(md) {
+      font-weight: 500;
+    }
+  }
   &__cell-content {
     display: flex;
     align-items: center;
+    @include media(md) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
     &--main {
       flex-direction: column;
+      @include media(md) {
+        align-items: center;
+      }
     }
   }
   &__cell-icon {
@@ -85,6 +105,9 @@
     vertical-align: middle;
     color: var(--gray300);
     cursor: pointer;
+    @include media(md) {
+      margin: 0 0 8px 0;
+    }
   }
   &__versus {
     font-family: var(--font);
@@ -112,6 +135,10 @@
       &:first-child {
         text-align: left;
         padding: 24px 40px;
+        @include media(md) {
+          font-weight: 500;
+          padding: 16px;
+        }
       }
     }
   }

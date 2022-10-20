@@ -1,12 +1,20 @@
+@use "../utils/mixins" as *;
+
 .error-404 {
   max-width: 1016px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+  @include media(md) {
+    align-items: flex-start;
+  }
   &__image {
     max-width: 548px;
     margin-bottom: 60px;
+    @include media(md) {
+      margin-bottom: 33px;
+    }
   }
   &__image-src {
     width: 100%;
@@ -19,5 +27,15 @@
     margin-bottom: 60px;
     text-align: center;
     line-height: 112%;
+    @include media(md) {
+      font-size: 40px;
+      margin-bottom: 32px;
+      text-align: left;
+    }
+    @include media(xs) {
+      font-size: 32px;
+      margin-bottom: 32px;
+      text-align: left;
+    }
   }
 }

@@ -1,16 +1,23 @@
+@use "../utils/mixins" as *;
+
 .case-grid-section {
   --gap-y: 80px !important;
+  @include media(md) {
+    --gap-y: 50px !important;
+  }
 }
 
 .case-category {
   display: flex;
   border-bottom: 1px solid var(--gray200);
   position: relative;
+  overflow: auto;
   &__item {
     padding: 0 24px 20px;
     cursor: pointer;
     color: var(--gray500);
     transition: color 300ms;
+    white-space: nowrap;
     &:hover {
       color: var(--black);
     }

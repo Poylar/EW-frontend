@@ -3,8 +3,9 @@ import gsap from "gsap";
 const tabTrigger = document.querySelectorAll("[data-tab]");
 const tab = document.querySelectorAll("[data-tab-item]");
 const currentItem = document.querySelector(".case-category__item--current");
-
+const gap = getComputedStyle(document.body).getPropertyValue("--gap");
 document.addEventListener("DOMContentLoaded", () => {
+  if (!tab) return;
   gsap.set([...tab].slice(1), {
     display: "none",
   });
@@ -13,12 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
     name: "setWidth",
     effect: (targets, config) => {
       return gsap.to(targets, {
-        delay: .5,
+        delay: 0.5,
         width: currentItem?.offsetWidth,
       });
     },
   });
-
   gsap.effects.setWidth(".case-category__line");
   tabTrigger.forEach((elem) => {
     elem.addEventListener("click", (e) => {
@@ -30,9 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const currentItem = document.querySelector(".case-category__item--current");
       const dataCategory = elem.dataset.tab;
       const targetItem = document.querySelector(`[data-tab-item="${dataCategory}"]`);
+      console.log(document.querySelector(".case-category").scrollLeft);
       gsap.to(".case-category__line", {
-   
-        x: currentItem.getBoundingClientRect().left - 40,
+        x: currentItem.getBoundingClientRect().left + document.querySelector(".case-category").scrollLeft - parseInt(gap),
         width: currentItem ? currentItem.offsetWidth : null,
       });
 

@@ -11,6 +11,9 @@
   }
   &.before-stack {
     margin: 80px 0;
+    @include media(md) {
+      margin: 40px 0 60px;
+    }
   }
   &__title {
     color: var(--gray500);
@@ -21,5 +24,9 @@
     line-height: 150%;
     font-size: 20px;
     font-family: var(--font);
+    @include media(md) {
+      font-size: 16px;
+      margin-top: 16px;
+    }
   }
 }

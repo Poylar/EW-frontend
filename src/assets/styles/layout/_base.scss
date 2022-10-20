@@ -22,7 +22,7 @@ html {
   margin-top: 86px;
   position: relative;
   @include media(md) {
-   margin-top: 64px;
+    margin-top: 64px;
   }
   &:before {
     content: "";
@@ -114,6 +114,9 @@ body {
   }
   &--100 {
     padding-top: 100px;
+    @include media(md) {
+      padding-top: 40px;
+    }
   }
   &:last-child {
     padding-bottom: var(--gap-y);

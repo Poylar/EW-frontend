@@ -6,6 +6,7 @@ if (reviewSliderContainer) {
   new Swiper(reviewSliderContainer, {
     slidesPerView: 1.1,
     spaceBetween: 16,
+    loop: true,
     breakpoints: {
       768: {
         slidesPerView: 1.8,

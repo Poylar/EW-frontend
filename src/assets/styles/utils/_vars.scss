@@ -18,7 +18,7 @@
   --font2: Montserrat;
   --bezier: cubic-bezier(0.075, 0.82, 0.165, 1);
   @include media(md) {
-    --gap-y: 60px;
+    --gap-y: 80px;
     --gap: 16px;
   }
   @each $breakpoint, $val in $breakpoints {

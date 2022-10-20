@@ -1,3 +1,5 @@
+@use "../utils/mixins" as *;
+
 .btn-row {
   display: flex;
   align-items: center;
@@ -6,6 +8,10 @@
     padding: 20px 36px;
     font-weight: 500;
     font-size: 16px;
+    @include media(md) {
+      padding: 18px;
+      font-size: 14px;
+    }
     &:last-child {
       margin: 0;
     }

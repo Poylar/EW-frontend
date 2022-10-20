@@ -1,3 +1,5 @@
+@use "../utils/mixins" as *;
+
 .work-progress-title {
   margin: 0 0 64px 0;
 }
@@ -11,6 +13,10 @@
     color: var(--gray500);
     transition: color 300ms;
     position: relative;
+    counter-increment: list;
+    @include media(md) {
+      padding: 32px 0;
+    }
     &:after {
       content: "";
       position: absolute;
@@ -41,15 +47,32 @@
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+    @include media(md) {
+      flex-direction: column;
+    }
   }
   &__title {
     font-size: 20px;
     font-family: var(--font);
+    @include media(md) {
+      font-size: 16px;
+    }
+    &:before {
+      content: "0" counter(list) ". ";
+      font-size: inherit;
+      @include media(md) {
+        content: none;
+      }
+    }
   }
   &__info {
     display: flex;
     justify-content: space-between;
     width: 310px;
+    @include media(md) {
+      width: 100%;
+      margin-top: 16px;
+    }
   }
   &__content {
     display: none;

@@ -6,7 +6,7 @@
 
 .features {
   display: grid;
-  gap: 40px 104px;
+  gap: 60px 104px;
   grid-template-columns: 1fr 1fr 1fr;
   @include media(xl) {
     grid-template-columns: repeat(2, 1fr);

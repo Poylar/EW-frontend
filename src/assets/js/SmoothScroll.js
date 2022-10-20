@@ -24,7 +24,9 @@ let smoother = ScrollSmoother.create({
   effects: true,
   onUpdate: (self) => {
     let smoothDirection = self.getVelocity() < 0 ? -1 : 1;
-    smoothDirection === -1 ? showHeader.play() : showHeader.reverse();
+    if (self.scrollTop() > 400) {
+      smoothDirection === -1 ? showHeader.play() : showHeader.reverse();
+    }
   },
 });
 

@@ -23,18 +23,33 @@
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 72px;
+  @include media(md) {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
   .cta-title {
     margin: 0;
+    @include media(md) {
+      margin:0 0 32px 0;
+    }
   }
 }
 .cta-manager {
   max-width: 364px;
   display: flex;
+  @include media(md) {
+    max-width: 100%;
+  }
   &__image {
     width: 100px;
     height: 100px;
     flex: 1 0 auto;
     margin: 0 32px 0 0;
+    @include media(md) {
+      width: 84px;
+      height: 84px;
+      margin: 0 20px 0 0;
+    }
   }
   &__image-src {
     width: 100%;
@@ -45,6 +60,9 @@
     font-size: 14px;
     font-family: var(--font);
     margin-bottom: 8px;
+    @include media(md) {
+      margin-bottom: 4px;
+    }
   }
   &__text {
     font-weight: 500;
