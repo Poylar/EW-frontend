@@ -10,6 +10,7 @@ import "./SmoothScroll";
 import "./Modal";
 import "./Menu";
 import "./SplitText";
-import media, { breakpoints } from "./MatchMedia";
+import "./Preloader";
+
 
 
