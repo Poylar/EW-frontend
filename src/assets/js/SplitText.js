@@ -30,7 +30,7 @@ window.addEventListener("load", () => {
       .timeline({
         scrollTrigger: {
           trigger: title,
-          start: "top bottom",
+          start: "top 90%",
           markers: true,
         },
       })
