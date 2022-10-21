@@ -60,7 +60,7 @@
       flex: 1;
       margin: 0;
     }
-    @include media(md) {
+    @include media(lg) {
       display: none;
     }
   }

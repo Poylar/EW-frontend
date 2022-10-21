@@ -13,43 +13,33 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-
-  @include media(md) {
-    margin-top: 50px;
-  }
-  .inner-text {
-    position: relative;
-    z-index: 2;
-  }
-  &:before,
-  &:after {
-    position: absolute;
-    top: 50%;
-    content: "";
-    width: 20px;
-    height: 20px;
-    background-color: var(--black);
-    border-radius: 50%;
-  }
   &:before {
-    left: -20px;
-    transform: translate(-50%, -50%);
-  }
-  &:after {
-    right: -20px;
-    transform: translate(50%, -50%);
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+    height: 1px;
+    background: var(--black);
   }
   &:hover {
-    color: var(--white);
     &:before {
-      animation: criss-cross-left 1.2s both;
-
-      animation-direction: alternate;
+      width: 100%;
     }
-    &:after {
-      animation: criss-cross-right 1.2s both;
-
-      animation-direction: alternate;
+  }
+  a {
+    &:before {
+      content:'';
+      position: absolute;
+      left: 0;
+      top:0;
+      width: 100%;
+      height: 100%;
+      display: block;
     }
+  }
+  @include media(md) {
+    margin-top: 50px;
   }
 }
