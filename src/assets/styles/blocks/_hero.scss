@@ -50,6 +50,9 @@
     max-width: 893px;
     margin-right: 2rem;
     line-height: 112%;
+    .line {
+      overflow: hidden;
+    }
     @include media(xl) {
       font-size: 40px;
       margin: 0 1rem 0 0;
@@ -73,6 +76,7 @@
     }
   }
   &__content {
+    margin-top: 80px;
     height: 0;
     overflow: hidden;
     width: 100%;
@@ -144,6 +148,7 @@
   position: sticky;
   top: 0;
   cursor: pointer;
+  margin: 0;
   z-index: 1010;
   @include media(md) {
     height: 220px;

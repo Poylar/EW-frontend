@@ -16,6 +16,7 @@ const showHeader = gsap.fromTo(
     y: 0,
   }
 );
+
 gsap.to(header, { duration: 0.1, y: 0 });
 let smoother = ScrollSmoother.create({
   wrapper: "#smooth-wrapper",
@@ -60,7 +61,6 @@ const tl2 = gsap
       end: "bottom",
       scrub: true,
       pin: false,
-
 
       markers: true,
     },
