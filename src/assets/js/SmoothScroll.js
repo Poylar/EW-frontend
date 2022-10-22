@@ -1,19 +1,19 @@
 import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import { breakpoints, mm } from "./MatchMedia";
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const header = document.querySelector(".header");
 
 const showHeader = gsap.fromTo(
   header,
   {
-    position: "absolute",
-    y: -100,
+    position: "fixed",
+    opacity: 0,
   },
   {
     position: "fixed",
-    y: 0,
+    opacity: 1,
   }
 );
 
@@ -32,41 +32,26 @@ let smoother = ScrollSmoother.create({
 });
 
 const video = document.querySelector(".js-start-video");
-const gap = getComputedStyle(document.body).getPropertyValue("--gap");
-const tl1 = gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".hero-video",
-      start: "top top",
-      end: "bottom",
-      scrub: true,
+mm.add(breakpoints.isDesktop, () => {
+  const tl1 = gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".hero-video",
+        start: "top top",
+        end: "bottom",
+        scrub: true,
 
-      pin: true,
-      pinType: "transform",
-    },
-  })
-  .to(video, {
-    delay: 0.2,
-    padding: 0,
-    duration: 2,
-    transformOrigin: "center center",
-  })
-  .to({}, { duration: 2 });
-
-const tl2 = gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".features__icon",
-      start: "top center",
-      end: "bottom",
-      scrub: true,
-      pin: false,
-
-      markers: true,
-    },
-  })
-  .to(".features__src", {
-    rotate: 360,
-  });
+        pin: true,
+        pinType: "transform",
+      },
+    })
+    .to(video, {
+      delay: 0.2,
+      padding: 0,
+      duration: 2,
+      transformOrigin: "center center",
+    })
+    .to({}, { duration: 2 });
+});
 
 export default smoother;

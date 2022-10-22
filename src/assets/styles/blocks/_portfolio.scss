@@ -27,9 +27,7 @@
     width: 100%;
     padding-bottom: calc(580px / 660px * 100%);
     position: relative;
-    @include media(md) {
-      padding-bottom: calc(208px / 328px * 100%);
-    }
+
   }
   &__src {
     position: absolute;

@@ -98,6 +98,11 @@
     max-height: 130px;
     overflow-y: auto;
     display: none;
+    @include media(md) {
+      left: auto;
+      right: 0;
+      transform: translate(100%, 0);
+    }
   }
   &__toolbox-icon {
     display: inline-block;

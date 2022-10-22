@@ -50,11 +50,15 @@
     max-width: 893px;
     margin-right: 2rem;
     line-height: 112%;
-
+    word-break: break-all;
     @include media(xl) {
       font-size: 40px;
       margin: 0 1rem 0 0;
       flex: 1;
+  
+    }
+    @include media(xs) {
+      font-size: 22px;
     }
 
     &--counter {

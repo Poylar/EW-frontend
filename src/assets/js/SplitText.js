@@ -3,7 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
-const titles = document.querySelectorAll(".hero__title");
+const titles = document.querySelectorAll(".hero__title:not(.hero__title--counter)");
 const sectionTitle = document.querySelectorAll(".section-title");
 window.addEventListener("load", () => {
   titles.forEach((title) => {
@@ -30,8 +30,7 @@ window.addEventListener("load", () => {
       .timeline({
         scrollTrigger: {
           trigger: title,
-          start: "top 90%",
-          markers: true,
+          start: "top 85%",
         },
       })
       .fromTo(

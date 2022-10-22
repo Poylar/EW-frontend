@@ -1,13 +1,9 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import media, { breakpoints } from "./MatchMedia";
+import { breakpoints, mm } from "./MatchMedia";
 gsap.registerPlugin(ScrollTrigger);
 
-/**
- * @return void
- */
-
-function StackContainer() {
+mm.add(breakpoints.isDesktop, () => {
   const panels = gsap.utils.toArray(".js-stack-container");
   panels.pop();
   panels.forEach((panel, i) => {
@@ -28,8 +24,4 @@ function StackContainer() {
       opacity: 1,
     });
   });
-}
-
-if (!media(breakpoints.md)) {
-  StackContainer();
-}
+});
