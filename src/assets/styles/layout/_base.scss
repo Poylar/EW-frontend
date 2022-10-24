@@ -3,7 +3,6 @@
 
 * {
   box-sizing: border-box;
-
 }
 
 html {
@@ -29,7 +28,7 @@ html {
     content: "";
     position: absolute;
     top: 0;
-    left: calc(var(--gap) - 1px);
+    left: calc(var(--gap));
     width: 1px;
     height: 100%;
     display: block;
@@ -40,7 +39,7 @@ html {
     content: "";
     position: absolute;
     top: 0;
-    right: calc(var(--gap) - 1px);
+    right: calc(var(--gap));
     width: 1px;
     height: 100%;
     display: block;

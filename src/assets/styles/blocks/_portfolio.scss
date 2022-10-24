@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px 40px;
-  @include media(xl) {
+  @include media(xxl) {
     grid-template-columns: repeat(2, 1fr);
   }
   @include media(md) {
@@ -30,6 +30,8 @@
     width: 100%;
     padding-bottom: calc(580px / 660px * 100%);
     position: relative;
+    display: block;
+    cursor: none;
   }
   &__src {
     position: absolute;
@@ -89,6 +91,8 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    background: var(--green);
+    padding: 1rem 1.5rem;
   }
 }
 
@@ -126,5 +130,6 @@
     transform: translate(-50%, -50%);
     border-radius: 100px;
     line-height: 1;
+
   }
 }

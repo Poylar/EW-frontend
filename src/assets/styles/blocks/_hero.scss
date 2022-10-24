@@ -97,6 +97,12 @@
       margin: 50px 0 0;
       height: 380px;
     }
+    &--team {
+      @include media(md) {
+        height: 0;
+        padding-bottom: calc(240px / 328px * 100%);
+      }
+    }
   }
   &__desc {
     margin: 64px 0 0;
@@ -106,6 +112,7 @@
     max-width: 651px;
     @include media(md) {
       font-size: 20px;
+      margin: 40px 0 0;
     }
   }
   + .section {
@@ -166,7 +173,7 @@
     padding-bottom: calc(220px / 328px * 100%);
     .video__src {
       position: absolute;
-      top:0;
+      top: 0;
       left: 0;
     }
   }
@@ -226,6 +233,7 @@
   background-color: var(--background-color);
   color: var(--white);
   position: relative;
+
   &--no-margin {
     margin: 0;
   }
@@ -293,6 +301,7 @@
   &--no-padding {
     padding: 0;
   }
+
   &--text-content {
     display: flex;
     flex-direction: column;
