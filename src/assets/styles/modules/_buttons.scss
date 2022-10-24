@@ -46,9 +46,24 @@
 
   &--primary {
     background: var(--green);
+    .inner-text,
+    a,
+    span {
+      position: relative;
+      z-index: 2;
+    }
   }
   &--secondary {
     border: 1px solid var(--gray200);
+    &:hover {
+      a,
+      span,
+      .inner-text {
+        color: var(--white);
+        position: relative;
+        z-index: 2;
+      }
+    }
     span,
     a {
       color: var(--black);

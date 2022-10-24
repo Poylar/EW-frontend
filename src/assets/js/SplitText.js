@@ -4,7 +4,7 @@ import { SplitText } from "gsap/SplitText";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 const titles = document.querySelectorAll(".hero__title:not(.hero__title--counter)");
-const sectionTitle = document.querySelectorAll(".section-title");
+const sectionTitle = document.querySelectorAll(".section-title:not(.section-title--counter)");
 window.addEventListener("load", () => {
   titles.forEach((title) => {
     const split = new SplitText(title, { type: "lines", linesClass: "line" });

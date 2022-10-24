@@ -9,45 +9,54 @@ section.section.container.container--lines.case-grid-section
   .case-grid-wrapper(data-tab-item="web")
     .case-grid.portfolio-grid.portfolio-grid--small-size
       each val in titles
-        a.portfolio-grid__item(href="/EW-frontend/case.html")
-          .portfolio-grid__image 
-            img.portfolio-grid__src(src="/src/assets/images/case-i.jpg" alt="")
-          .portfolio-grid__info 
+        .portfolio-grid__item
+          .portfolio-grid__image
+            .portfolio-grid__overlay.portfolio-overlay 
+              .portfolio-overlay__btn.btn.btn--primary
+                a.portfolio-overlay__link.inner-text(href="") Смотреть 
+            video.portfolio-grid__src(src="/src/assets/video/case.mp4" autoplay loop muted alt="")
+          a.portfolio-grid__info(href="") 
             .portfolio-grid__category
               span.portfolio-grid__category-item UX/UI Дизайн, 
               span.portfolio-grid__category-item Фронтенд, 
               span.portfolio-grid__category-item SEO, 
               span.portfolio-grid__category-item SMM  
-          h3.portfolio-grid__title.title= val
+          h3.portfolio-grid__title.title=val
     .more-link-wrapper 
       span.more-link.inner-text Больше кейсов
   .case-grid-wrapper(data-tab-item="design-support")
     .case-grid.portfolio-grid.portfolio-grid--small-size
       each val in titles
-        a.portfolio-grid__item(href="/EW-frontend/case.html")
-          .portfolio-grid__image 
-            img.portfolio-grid__src(src="/src/assets/images/b-case.jpg" alt="")
-          .portfolio-grid__info 
+        .portfolio-grid__item
+          .portfolio-grid__image
+            .portfolio-grid__overlay.portfolio-overlay 
+              .portfolio-overlay__btn.btn.btn--primary
+                a.portfolio-overlay__link.inner-text(href="") Смотреть 
+            img.portfolio-grid__src(src="/src/assets/images/b-case.jpg" autoplay loop muted alt="")
+          a.portfolio-grid__info(href="") 
             .portfolio-grid__category
               span.portfolio-grid__category-item UX/UI Дизайн, 
               span.portfolio-grid__category-item Фронтенд, 
               span.portfolio-grid__category-item SEO, 
               span.portfolio-grid__category-item SMM  
-          h3.portfolio-grid__title.title= val
+          h3.portfolio-grid__title.title=val
     .more-link-wrapper 
       span.more-link.inner-text Больше кейсов
   .case-grid-wrapper(data-tab-item="seo")
     .case-grid.portfolio-grid.portfolio-grid--small-size
       each val in titles
-        a.portfolio-grid__item(href="/EW-frontend/case.html")
-          .portfolio-grid__image 
-            img.portfolio-grid__src(src="/src/assets/images/c-case.jpg" alt="")
-          .portfolio-grid__info 
+        .portfolio-grid__item
+          .portfolio-grid__image
+            .portfolio-grid__overlay.portfolio-overlay 
+              .portfolio-overlay__btn.btn.btn--primary
+                a.portfolio-overlay__link.inner-text(href="") Смотреть 
+            img.portfolio-grid__src(src="/src/assets/images/c-case.jpg" autoplay loop muted alt="")
+          a.portfolio-grid__info(href="") 
             .portfolio-grid__category
               span.portfolio-grid__category-item UX/UI Дизайн, 
               span.portfolio-grid__category-item Фронтенд, 
               span.portfolio-grid__category-item SEO, 
               span.portfolio-grid__category-item SMM  
-          h3.portfolio-grid__title.title= val
+          h3.portfolio-grid__title.title=val
     .more-link-wrapper 
       span.more-link.inner-text Больше кейсов

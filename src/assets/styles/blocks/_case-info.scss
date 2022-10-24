@@ -1,15 +1,30 @@
+@use "../utils//mixins" as *;
+
 .case-info {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 777px;
+  @include media(md) {
+    flex-direction: column;
+  }
   &__col {
     max-width: 310px;
+    @include media(md) {
+      margin-bottom: 32px;
+      &:last-child {
+        margin: 0;
+      }
+    }
   }
   &__heading {
     font-size: 18px;
     color: var(--gray500);
     margin-bottom: 24px;
+    @include media(md) {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
   }
   &__item {
     font-family: var(--font);

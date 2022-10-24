@@ -15,6 +15,11 @@
   height: 100vh;
   min-height: 400px;
   position: relative;
+  @include media(md) {
+    height: auto;
+    min-height: 100%;
+    padding: 0 var(--gap);
+  }
 }
 
 .hero-row {
@@ -55,10 +60,9 @@
       font-size: 40px;
       margin: 0 1rem 0 0;
       flex: 1;
-  
     }
     @include media(xs) {
-      font-size: 22px;
+      font-size: 40px;
     }
 
     &--counter {
@@ -100,6 +104,9 @@
     font-size: 24px;
     line-height: 133%;
     max-width: 651px;
+    @include media(md) {
+      font-size: 20px;
+    }
   }
   + .section {
     --gap-y: 120px;
@@ -153,7 +160,15 @@
   margin: 0;
   z-index: 1010;
   @include media(md) {
-    height: 220px;
+    padding: 0;
+    margin-top: 50px;
+    height: 0;
+    padding-bottom: calc(220px / 328px * 100%);
+    .video__src {
+      position: absolute;
+      top:0;
+      left: 0;
+    }
   }
   &:hover {
     .svg-icon {

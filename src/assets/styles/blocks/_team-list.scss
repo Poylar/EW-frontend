@@ -1,8 +1,15 @@
+@use "../utils/mixins" as *;
+
 .team-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 60px 40px;
-  &__item {
+  @include media(xxl) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include media(md) {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
   }
   &__image {
     position: relative;
@@ -19,5 +26,8 @@
   }
   &__member {
     padding: 24px 0 0;
+    @include media(md) {
+      padding: 12px 0 0;
+    }
   }
 }

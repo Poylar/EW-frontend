@@ -21,7 +21,7 @@ gsap.to(header, { duration: 0.1, y: 0 });
 let smoother = ScrollSmoother.create({
   wrapper: "#smooth-wrapper",
   content: "#smooth-content",
-  smooth: 1.5,
+
   effects: true,
   onUpdate: (self) => {
     let smoothDirection = self.getVelocity() < 0 ? -1 : 1;
